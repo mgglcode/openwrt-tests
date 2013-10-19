@@ -1,0 +1,19 @@
+
+dot1-config-842nd
+
+ this is the config when build for ar71xx wr842nd from scratch.
+
+dot2-config.ar71xx_generic
+dot2-config-modified
+dot2-config-used1
+dot2-config-used2
+dot-disablem.pl
+
+  download dot2-config.ar71xx_generic from openwrt.org.
+  pass it through dot-disablem.pl to get the -modified.
+  copy -modified to .config and run make oldconfig get -used1. 
+  it fails with rt2x...ko. 
+  manually change it and pass to make oldconfig. 
+  build. this is the -used2 file.
+
+
