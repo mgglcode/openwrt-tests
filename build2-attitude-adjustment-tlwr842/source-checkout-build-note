@@ -65,3 +65,12 @@ make oldconfig
 cp .config dot5-cf3
 
 
+cp dot5-cf1 .config
+make menuconfig  select planex mzkw04nu
+cp .config dot6-cf1
+cat dot6-cf1 | perl dot-disablem.pl > dot6-cf2
+cp dot6-cf2 .config
+make oldconfig
+cp .config dot6-cf3
+
+
