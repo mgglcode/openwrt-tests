@@ -1,12 +1,15 @@
 
+
 dot1-config-842nd
 
  this is the config when build for ar71xx wr842nd from scratch.
+
 
 dot2-config.ar71xx_generic
 dot2-config-modified
 dot2-config-used1
 dot2-config-used2
+dot2-config-used3
 dot-disablem.pl
 
   download dot2-config.ar71xx_generic from openwrt.org.
@@ -15,5 +18,34 @@ dot-disablem.pl
   it fails with rt2x...ko. 
   manually change it and pass to make oldconfig. 
   build. this is the -used2 file.
+  missing ohci driver. built all bins. 
+  select 842 only. build. the -used3 file.
+ 
+dot-log-2used3
+
+  install packages for dot2-config-used3
+
+
+dot3-cf1
+dot3-cf2
+dot3-cf3
+
+  same as dot2-config, but ran first:
+     ./scripts/feeds update -a
+     ./scripts/feeds install -a
+
+dot-log-3cf3
+
+  install packages for dot3-cf3. resulting 842 upgrade bin same size as on web. 
+
+
+dot-note
+
+  this file.
+
+
+source-repo-note
+
+  note to check out sources from repos. 
 
 
