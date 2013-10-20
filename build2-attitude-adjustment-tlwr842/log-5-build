@@ -1,0 +1,90 @@
+
+$ time make
+ make[1] world
+ make[2] target/compile
+ make[3] -C target/linux compile
+ make[2] package/cleanup
+ make[2] package/compile
+ make[3] -C package/toolchain compile
+ make[3] -C package/libnl-tiny compile
+ make[3] -C package/libjson-c compile
+ make[3] -C package/lua compile
+ make[3] -C package/libubox compile
+ make[3] -C package/ubus compile
+ make[3] -C package/uci compile
+ make[3] -C package/netifd compile
+ make[3] -C package/opkg host-compile
+ make[3] -C package/base-files compile
+ make[3] -C package/busybox compile
+ make[3] -C package/dnsmasq compile
+ make[3] -C package/dropbear compile
+ make[3] -C feeds/luci/freifunk-common compile
+ make[3] -C feeds/luci/community-profiles compile
+ make[3] -C feeds/routing/olsrd compile
+ make[3] -C package/iptables compile
+ make[3] -C package/firewall compile
+ make[3] -C package/iproute2 compile
+ make[3] -C feeds/luci/freifunk-gwcheck compile
+ make[3] -C feeds/luci/freifunk-mapupdate compile
+ make[3] -C package/iwinfo compile
+ make[3] -C package/lua host-compile
+ make[3] -C package/px5g compile
+ make[3] -C package/uhttpd compile
+ make[3] -C feeds/luci/luci compile
+ make[3] -C package/gpio-button-hotplug compile
+ make[3] -C package/hostapd compile
+ make[3] -C package/hotplug2 compile
+ make[3] -C package/iw compile
+ make[3] -C package/kernel compile
+ make[3] -C package/mac80211 compile
+ make[3] -C package/mtd compile
+ make[3] -C package/opkg compile
+ make[3] -C package/libpcap compile
+ make[3] -C package/linux-atm compile
+ make[3] -C package/resolveip compile
+ make[3] -C package/ppp compile
+ make[3] -C package/swconfig compile
+ make[3] -C package/uboot-ar71xx compile
+ make[3] -C package/zlib compile
+ make[3] -C package/uboot-envtools compile
+ make[2] package/install
+ make[3] -C package/busybox install
+ make[3] -C package/dnsmasq install
+ make[3] -C package/dropbear install
+ make[3] -C feeds/luci/luci install
+ make[3] -C package/firewall install
+ make[3] -C package/gpio-button-hotplug install
+ make[3] -C package/hostapd install
+ make[3] -C package/hotplug2 install
+ make[3] -C package/iptables install
+ make[3] -C package/iw install
+ make[3] -C package/iwinfo install
+ make[3] -C package/kernel install
+ make[3] -C package/libjson-c install
+ make[3] -C package/libnl-tiny install
+ make[3] -C package/libubox install
+ make[3] -C package/lua install
+ make[3] -C package/mac80211 install
+ make[3] -C package/mtd install
+ make[3] -C package/netifd install
+ make[3] -C package/opkg install
+ make[3] -C package/ppp install
+ make[3] -C package/swconfig install
+ make[3] -C package/toolchain install
+ make[3] -C package/uboot-ar71xx install
+ make[3] -C package/uboot-envtools install
+ make[3] -C package/ubus install
+ make[3] -C package/uci install
+ make[3] -C package/uhttpd install
+ make[3] -C package/base-files install
+ make[2] package/rootfs-prepare
+ make[3] package/preconfig
+ make[2] target/install
+ make[3] -C target/linux install
+ make[2] package/index
+
+real    3m36.659s
+user    2m53.370s
+sys     0m40.274s
+
+

@@ -1,0 +1,186 @@
+
+$ time make
+
+ make[1] world
+ make[2] tools/install
+ make[3] -C tools/ccache compile
+ make[3] -C tools/ccache install
+ make[3] -C tools/m4 compile
+ make[3] -C tools/m4 install
+ make[3] -C tools/sed compile
+ make[3] -C tools/sed install
+ make[3] -C tools/libtool compile
+ make[3] -C tools/libtool install
+ make[3] -C tools/autoconf compile
+ make[3] -C tools/autoconf install
+ make[3] -C tools/pkg-config compile
+ make[3] -C tools/pkg-config install
+ make[3] -C tools/xz compile
+ make[3] -C tools/xz install
+ make[3] -C tools/automake compile
+ make[3] -C tools/automake install
+ make[3] -C tools/gmp compile
+ make[3] -C tools/gmp install
+ make[3] -C tools/mpfr compile
+ make[3] -C tools/mpfr install
+ make[3] -C tools/mpc compile
+ make[3] -C tools/mpc install
+ make[3] -C tools/libelf compile
+ make[3] -C tools/libelf install
+ make[3] -C tools/flex compile
+ make[3] -C tools/flex install
+ make[3] -C tools/bison compile
+ make[3] -C tools/bison install
+ make[3] -C tools/mklibs compile
+ make[3] -C tools/mklibs install
+ make[3] -C tools/sstrip compile
+ make[3] -C tools/sstrip install
+ make[3] -C tools/ipkg-utils compile
+ make[3] -C tools/ipkg-utils install
+ make[3] -C tools/genext2fs compile
+ make[3] -C tools/genext2fs install
+ make[3] -C tools/e2fsprogs compile
+ make[3] -C tools/e2fsprogs install
+ make[3] -C tools/mtd-utils compile
+ make[3] -C tools/mtd-utils install
+ make[3] -C tools/mkimage compile
+ make[3] -C tools/mkimage install
+ make[3] -C tools/firmware-utils compile
+ make[3] -C tools/firmware-utils install
+ make[3] -C tools/patch-cmdline compile
+ make[3] -C tools/patch-cmdline install
+ make[3] -C tools/quilt compile
+ make[3] -C tools/quilt install
+ make[3] -C tools/yaffs2 compile
+ make[3] -C tools/yaffs2 install
+ make[3] -C tools/flock compile
+ make[3] -C tools/flock install
+ make[3] -C tools/padjffs2 compile
+ make[3] -C tools/padjffs2 install
+ make[3] -C tools/mm-macros compile
+ make[3] -C tools/mm-macros install
+ make[3] -C tools/xorg-macros compile
+ make[3] -C tools/xorg-macros install
+ make[3] -C tools/xfce-macros compile
+ make[3] -C tools/xfce-macros install
+ make[3] -C tools/missing-macros compile
+ make[3] -C tools/missing-macros install
+ make[3] -C tools/cmake compile
+ make[3] -C tools/cmake install
+ make[3] -C tools/scons compile
+ make[3] -C tools/scons install
+ make[3] -C tools/lzma-old compile
+ make[3] -C tools/lzma-old install
+ make[3] -C tools/squashfs compile
+ make[3] -C tools/squashfs install
+ make[3] -C tools/lzma compile
+ make[3] -C tools/lzma install
+ make[3] -C tools/squashfs4 compile
+ make[3] -C tools/squashfs4 install
+ make[3] -C tools/b43-tools compile
+ make[3] -C tools/b43-tools install
+ make[2] toolchain/install
+ make[3] -C toolchain/gdb prepare
+ make[3] -C toolchain/gdb compile
+ make[3] -C toolchain/gdb install
+ make[3] -C toolchain/binutils prepare
+ make[3] -C toolchain/binutils compile
+ make[3] -C toolchain/binutils install
+ make[3] -C toolchain/gcc/minimal prepare
+ make[3] -C toolchain/gcc/minimal compile
+ make[3] -C toolchain/gcc/minimal install
+ make[3] -C toolchain/kernel-headers prepare
+ make[3] -C toolchain/kernel-headers compile
+ make[3] -C toolchain/kernel-headers install
+ make[3] -C toolchain/uClibc/headers prepare
+ make[3] -C toolchain/uClibc/headers compile
+ make[3] -C toolchain/uClibc/headers install
+ make[3] -C toolchain/gcc/initial prepare
+ make[3] -C toolchain/gcc/initial compile
+ make[3] -C toolchain/gcc/initial install
+ make[3] -C toolchain/uClibc prepare
+ make[3] -C toolchain/uClibc compile
+ make[3] -C toolchain/uClibc install
+ make[3] -C toolchain/gcc/final prepare
+ make[3] -C toolchain/gcc/final compile
+ make[3] -C toolchain/gcc/final install
+ make[3] -C toolchain/uClibc/utils prepare
+ make[3] -C toolchain/uClibc/utils compile
+ make[3] -C toolchain/uClibc/utils install
+ make[2] target/compile
+ make[3] -C target/linux compile
+ make[2] package/cleanup
+ make[2] package/compile
+ make[3] -C package/toolchain compile
+ make[3] -C package/libnl-tiny compile
+ make[3] -C package/libjson-c compile
+ make[3] -C package/lua compile
+ make[3] -C package/libubox compile
+ make[3] -C package/ubus compile
+ make[3] -C package/uci compile
+ make[3] -C package/netifd compile
+ make[3] -C package/opkg host-compile
+ make[3] -C package/base-files compile
+ make[3] -C package/busybox compile
+ make[3] -C package/dnsmasq compile
+ make[3] -C package/dropbear compile
+ make[3] -C package/iptables compile
+ make[3] -C package/firewall compile
+ make[3] -C package/gpio-button-hotplug compile
+ make[3] -C package/hostapd compile
+ make[3] -C package/hotplug2 compile
+ make[3] -C package/iw compile
+ make[3] -C package/iwinfo compile
+ make[3] -C package/kernel compile
+ make[3] -C package/mac80211 compile
+ make[3] -C package/mtd compile
+ make[3] -C package/opkg compile
+ make[3] -C package/libpcap compile
+ make[3] -C package/linux-atm compile
+ make[3] -C package/resolveip compile
+ make[3] -C package/ppp compile
+ make[3] -C package/swconfig compile
+ make[3] -C package/uboot-ar71xx compile
+ make[3] -C package/zlib compile
+ make[3] -C package/uboot-envtools compile
+ make[3] -C package/uhttpd compile
+ make[2] package/install
+ make[3] -C package/busybox install
+ make[3] -C package/dnsmasq install
+ make[3] -C package/dropbear install
+ make[3] -C package/firewall install
+ make[3] -C package/gpio-button-hotplug install
+ make[3] -C package/hostapd install
+ make[3] -C package/hotplug2 install
+ make[3] -C package/iptables install
+ make[3] -C package/iw install
+ make[3] -C package/iwinfo install
+ make[3] -C package/kernel install
+ make[3] -C package/libjson-c install
+ make[3] -C package/libnl-tiny install
+ make[3] -C package/libubox install
+ make[3] -C package/lua install
+ make[3] -C package/mac80211 install
+ make[3] -C package/mtd install
+ make[3] -C package/netifd install
+ make[3] -C package/opkg install
+ make[3] -C package/ppp install
+ make[3] -C package/swconfig install
+ make[3] -C package/toolchain install
+ make[3] -C package/uboot-ar71xx install
+ make[3] -C package/uboot-envtools install
+ make[3] -C package/ubus install
+ make[3] -C package/uci install
+ make[3] -C package/uhttpd install
+ make[3] -C package/base-files install
+ make[2] package/rootfs-prepare
+ make[3] package/preconfig
+ make[2] target/install
+ make[3] -C target/linux install
+ make[2] package/index
+
+real    146m29.011s
+user    105m4.037s
+sys     12m56.760s
+
+

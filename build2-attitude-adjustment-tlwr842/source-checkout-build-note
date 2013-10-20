@@ -1,0 +1,67 @@
+
+
+additional packages: subversion gcc-c++ zlib-devel ncurses-devel
+
+
+git clone git://git.openwrt.org/12.09/openwrt.git
+
+mv openwrt openwrt-aa
+
+git clone openwrt-aa/ owaa
+
+
+cd owaa
+./scripts/feeds update -a
+
+
+du -sh luci packages xwrt routing
+2.0M    luci
+60M     packages
+9.7M    xwrt
+1.1M    routing
+
+
+cd ../../
+cp -a owaa owab
+
+
+cd owab
+cp dot3-cf3 .
+cat dot3-cf3 | perl dot-disablem.pl > dot4-cf1
+cp dot4-cf1 .config
+make oldconfig
+cp .config dot4-cf2
+
+du -sh . 
+175M 
+
+touch xstep1
+cat .config | perl dot-installp.pl
+
+
+cd ..
+cp -a owab owac
+
+cd owab
+time make
+
+
+missing all the luci packages. use the following command to see:
+diff -u dot3-cf3 dot4-cf2 | grep -v '^\-#' | grep -v '^+#' | grep -v '^ #' | less
+
+manually add them to dot4-cf3. 
+cp dot4-cf3 .config
+cat .config | perl dot-installp.pl
+make oldconfig
+
+it builds but complains config is out of sync. 
+
+
+make menuconfig
+cp .config dot5-cf1
+cat dot5-cf1 | perl dot-disablem.pl > dot5-cf2
+cp dot5-cf2 .config
+make oldconfig
+cp .config dot5-cf3
+
+

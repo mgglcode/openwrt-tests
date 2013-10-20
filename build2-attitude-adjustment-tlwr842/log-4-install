@@ -1,0 +1,104 @@
+
+$ cat .config | perl dot-installp.pl 
+./scripts/feeds install base-files
+./scripts/feeds install busybox
+./scripts/feeds install dnsmasq
+./scripts/feeds install dropbear
+./scripts/feeds install firewall
+./scripts/feeds install hotplug2
+./scripts/feeds install libc
+./scripts/feeds install libgcc
+./scripts/feeds install mtd
+./scripts/feeds install netifd
+./scripts/feeds install opkg
+./scripts/feeds install swconfig
+./scripts/feeds install ubus
+./scripts/feeds install ubusd
+./scripts/feeds install uci
+./scripts/feeds install iptables
+./scripts/feeds install uhttpd
+./scripts/feeds install iw
+./scripts/feeds install ppp
+./scripts/feeds install ppp-mod-pppoe
+./scripts/feeds install wpad-mini
+./scripts/feeds install libip4tc
+./scripts/feeds install libip6tc
+./scripts/feeds install libxtables
+./scripts/feeds install libblobmsg-json
+./scripts/feeds install libiwinfo
+./scripts/feeds install libjson
+./scripts/feeds install libjson-c
+./scripts/feeds install liblua
+./scripts/feeds install libnl-tiny
+./scripts/feeds install libubox
+./scripts/feeds install libubus
+./scripts/feeds install libubus-lua
+./scripts/feeds install libuci
+./scripts/feeds install libuci-lua
+./scripts/feeds install kmod-crypto-aes
+./scripts/feeds install kmod-crypto-arc4
+./scripts/feeds install kmod-crypto-core
+./scripts/feeds install kmod-leds-gpio
+./scripts/feeds install kmod-ledtrig-default-on
+./scripts/feeds install kmod-ledtrig-netdev
+./scripts/feeds install kmod-ledtrig-timer
+./scripts/feeds install kmod-ledtrig-usbdev
+./scripts/feeds install kmod-lib-crc-ccitt
+./scripts/feeds install kmod-nls-base
+./scripts/feeds install kmod-ipt-core
+./scripts/feeds install kmod-ipt-conntrack
+./scripts/feeds install kmod-ipt-nat
+./scripts/feeds install kmod-ipt-nathelper
+./scripts/feeds install kmod-ppp
+./scripts/feeds install kmod-pppoe
+./scripts/feeds install kmod-pppox
+./scripts/feeds install kmod-gpio-button-hotplug
+./scripts/feeds install kmod-wdt-ath79
+./scripts/feeds install kmod-usb-core
+./scripts/feeds install kmod-usb-ohci
+./scripts/feeds install kmod-usb2
+./scripts/feeds install kmod-ath
+./scripts/feeds install kmod-ath9k
+./scripts/feeds install kmod-ath9k-common
+./scripts/feeds install kmod-cfg80211
+./scripts/feeds install kmod-mac80211
+./scripts/feeds install MAC80211_DEBUGFS
+WARNING: No feed for package 'MAC80211_DEBUGFS' found, maybe it's already part of the standard packages?
+./scripts/feeds install MAC80211_MESH
+WARNING: No feed for package 'MAC80211_MESH' found, maybe it's already part of the standard packages?
+./scripts/feeds install uboot-ar71xx-nbg460n_550n_550nh
+./scripts/feeds install jshn
+./scripts/feeds install uboot-envtools
+./scripts/feeds install libiwinfo-lua
+./scripts/feeds install lua
+
+
+$ du -sh .
+175M    .
+
+
+$ find . -newer xstep1 
+.
+./staging_dir/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/lib
+./staging_dir/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/lib/lib
+./staging_dir/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/info.mk
+./dot-installp.pl
+./tmp/.build
+./tmp/.packagedeps
+./tmp/info
+./tmp/info/.files-packageinfo-21944
+./tmp/info/.files-packageinfo.mk
+./tmp/info/.files-targetinfo.mk
+./tmp/info/.files-targetinfo-21944
+
+$ find . -newer xstep1 | xargs ls -F
+./dot-installp.pl
+./staging_dir/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/info.mk
+./staging_dir/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/lib/lib@
+./tmp/.build
+./tmp/info/.files-packageinfo-21944
+./tmp/info/.files-packageinfo.mk
+./tmp/info/.files-targetinfo-21944
+./tmp/info/.files-targetinfo.mk
+./tmp/.packagedeps
+
