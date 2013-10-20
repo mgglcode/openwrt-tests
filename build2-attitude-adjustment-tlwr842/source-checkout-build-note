@@ -74,3 +74,6 @@ make oldconfig
 cp .config dot6-cf3
 
 
+dot6-cf4 manually remove kmod-usb2
+
+
