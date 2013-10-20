@@ -19,7 +19,7 @@ dot-disablem.pl
   manually change it and pass to make oldconfig. 
   build. this is the -used2 file.
   missing ohci driver. built all bins. 
-  select 842 only. build. the -used3 file.
+  make menuconfig select 842 only. build. the -used3 file.
  
 dot-log-2used3
 
