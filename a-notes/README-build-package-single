@@ -1,0 +1,34 @@
+
+http://wiki.openwrt.org/doc/howtobuild/single.package
+
+
+If you want to upgrade a package without reflashing the router. 
+
+
+Follow the building instruction up to the point when you have 
+to make menuconfig. Select the target, then check the package 
+you want to build and its dependencies. 
+
+Use "opkg info nano" in your router to find out the depencies 
+for nano. 
+
+
+Then these commands for tools: 
+
+  make tools/install
+  make toolchain/install
+
+
+Build the dependencies:
+
+  make package/ncurses/compile
+  make package/ncurses/install
+
+
+Build your nano package:
+
+  make package/nano/compile
+  make package/nano/install
+  make package/index
+
+

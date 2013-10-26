@@ -1,0 +1,39 @@
+
+http://wiki.openwrt.org/doc/devel/feeds
+
+
+Using the feed
+
+  Edit your feeds.conf (i.e. /home/user/openwrt/project/openwrt/feeds.conf)
+
+  Add a new line to access the feed (and in the case of adding to the packages 
+  feed comment out the normal packages feed.)
+    e.g.
+
+    #srv-svn packages svn://svn.openwrt.org/openwrt/packages 
+    src-link customfeed /home/user/openwrt/project/packages
+
+  or in the case of the second example package in your own folder:
+
+    src-link customfeed /home/user/openwrt/project/customfeed
+
+  Update the feed: from the <buildroot dir> (e.g. 
+  /home/user/openwrt/project/openwrt) do:
+
+    ./scripts/feeds update customfeed
+
+  And then install it
+
+    ./scripts/feeds install -p customfeed
+
+  Now your package(s) should be available when you do
+
+    make menuconfig
+
+
+The downloaded sources first go to <buildroot>/dl as gzipped .gz files. 
+And there they are stored and get unzipped to /build_dir . See e.g. 
+<buildroot>/build_dir/target-*/ and below it you will find subdirectories 
+for each package's sources. 
+
+

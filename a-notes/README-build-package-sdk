@@ -1,0 +1,31 @@
+
+http://wiki.openwrt.org/doc/howto/obtain.firmware.sdk
+Using the SDK
+
+
+Trunk package feed is at 
+svn://svn.openwrt.org/openwrt/packages
+
+It can be viewed by https://dev.openwrt.org/browser/packages
+
+
+Use svn export command to obtain package definition.
+
+  $ svn export svn://svn.openwrt.org/openwrt/packages/utils/nano package/nano
+  $ grep DEPENDS package/nano/Makefile
+
+
+Build:
+
+  make package/example/download
+  make package/example/prepare
+  make package/example/compile
+  make package/example/clean
+
+  make package/index
+
+The last step makes the package usable as local opkg source.
+
+The packages are in /bin/packages/.../
+
+

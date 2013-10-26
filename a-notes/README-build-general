@@ -1,0 +1,56 @@
+
+http://wiki.openwrt.org/doc/howto/build
+buildroot usage
+
+
+Kernel configuration and review:
+
+  make kenrel_menuconfig
+
+  svn diff target/linux/
+
+
+Target files
+
+  <buildroot>/files
+
+
+Defconfig
+
+Select your target then check the depencies and install missing: 
+
+  make defconfig
+
+
+Compile single package or subpackage:
+
+  make package/cups/compile V=s
+
+  make package/feeds/pckages/mc/compile V=s
+
+
+Clean /bin and /build_dir
+
+  make clean
+
+
+Clean also /staging_dir, /toolchain, /logs
+
+  make dirclean
+
+
+Clean your configuration, downloads, feeds
+
+  make distclean
+
+
+Clean small part
+
+  make target/linux/clean
+  make package/base-files/clean
+  make package/feeds/luci/luci/clean
+
+
+
+
+
