@@ -6,7 +6,6 @@ buildroot usage
 Kernel configuration and review:
 
   make kenrel_menuconfig
-
   svn diff target/linux/
 
 
@@ -25,8 +24,8 @@ Select your target then check the depencies and install missing:
 Compile single package or subpackage:
 
   make package/cups/compile V=s
-
   make package/feeds/pckages/mc/compile V=s
+  make target/linux/compile V=s
 
 
 Clean /bin and /build_dir
