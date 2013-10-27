@@ -113,3 +113,10 @@ build
 usb drive works
 
 
+
+cp dot6-cf8 .config
+make menuconfig  select wr842nd
+cp .config dot7-cf1
+time make   --4m19s. same lx config.
+
+
