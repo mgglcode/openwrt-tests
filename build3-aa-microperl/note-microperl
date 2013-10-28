@@ -1,0 +1,42 @@
+
+http://eduunix.ccut.edu.cn/index2/html/linux/O%27Reilly%20-%20Building%20Embedded%20Linux%20Systems/belinuxsys-CHP-4-SECT-5.html
+
+also on google book: page 133 of Building Embedded Linux Systems - Karim Yaghmour, Jon Masters, Gilad Ben-Yossef, Philippe Gerum
+ http://books.google.ca/books?id=I-hVqkX6A9cC&pg=PA132&lpg=PA132&dq=microperl+size&source=bl&ots=avRjl3FhZr&sig=VDwnxyLxXweJffLaRrxFPZO6fNo&hl=en&sa=X&ei=D5RtUvGWCeiMyAH66YHYBg&ved=0CEUQ6AEwBA#v=onepage&q=microperl%20size&f=false
+
+
+To build microperl for your target, you must first download a Perl 
+version from CPAN and extract it into the ${PRJROOT}/sysapps directory. 
+Place the package in the sysapps directory, because it will run only 
+on the target and will not be used to build any of the other software 
+packages for your target. With the package extracted, we move into 
+its directory for the build. Here, we cannot use a different build 
+directory, as we did for the GNU toolchain, because Perl does not 
+support this build method.
+
+ $ cd ${PRJROOT}/sysapps/perl-5.7.3
+
+Since microperl is a minimal build of Perl, we do not need to configure 
+anything. We can build the package by using the appropriate Makefile 
+and instructing it to use the uClibc compiler wrapper instead of 
+the standard gcc compiler:
+
+ $ make -f Makefile.micro CC=i386-uclibc-gcc
+
+This will generate a microperl binary in the package's root directory. 
+This binary does not require any other Perl components and can be 
+copied directly to the /bin directory of your target's root filesystem, 
+${PRJROOT}/rootfs.
+
+When dynamically linked with either glibc or uClibc and stripped, 
+the microperl binary is around 900 KB in size. When statically linked 
+and stripped, the binary is 1.2 MB in size with glibc, and 930 KB 
+with uClibc. As you can see, uClibc is the better choice in this case 
+for size reasons.
+
+For more information on how microperl is built, have a look at 
+the Makefile.micro Makefile and the uconfig.sh script. As work 
+continues on microperl, it is expected that more documentation 
+will become available.
+
+

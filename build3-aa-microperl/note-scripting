@@ -1,0 +1,36 @@
+
+http://www.hackup.net/2012/01/openwrt-and-scripting-languages-part-1/
+
+
+mount /overlay to an external usb drive:
+
+[1] mount usb drive temporarily and copy /overlay:
+
+  mount /dev/sda1 /mnt/sda1
+  tar -C /overlay -cvf - . | tar -C /mnt/sda1 -xf -
+
+[2] edit /etc/config/fstab to configure the usb partition as the new overlay:
+
+  config mount
+      option target   /overlay
+      option device   /dev/sda1
+      option fstype   ext3
+      option options  rw,sync
+      option enabled  1
+      option enabled_fsck 0
+
+[3] reboot
+
+
+
+openwrt.org:
+config network file to setup a static route:
+
+ config route
+      option 'interface' 'lan'
+      option 'target'    '192.168.0.0' #your inner subnet
+      option 'gateway'   '192.168.1.x' #your inner wan ip
+      option 'netmask'   '255.255.255.0'
+
+
+

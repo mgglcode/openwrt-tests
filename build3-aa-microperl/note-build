@@ -1,0 +1,23 @@
+
+
+Start from previous dot7-cf1. Enable microperl as a module. 
+Save to dot7-cf2.
+
+
+Issue command:
+
+  make package/feeds/packages/perl/compile
+
+It downloads and builds: 
+
+  libxml2      4.7M
+  berkeley-db  12M
+  gdbm         542k
+  perl 5.10    15M
+
+
+The built ipk is 411960 bytes for ar71xx at perl version 5.10.0-7.
+The microperl file on build_dir/target-...uClibc-.../perl/perl-5.10.0 
+is 1050437 bytes.
+
+
